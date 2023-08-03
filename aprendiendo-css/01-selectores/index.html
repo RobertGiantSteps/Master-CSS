@@ -1,0 +1,124 @@
+
+<!--Estructura basica de una pagina web-->
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+    	<title>Mi primera Web</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+        <div id="descripcion">
+    	<h1 id="titulo">Titulo de mi web</h1>
+	    <h2>Bienvenidos a mi web</h2>
+        <ul id="menu">
+            <li>
+                <a href="#">Temario</a>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">LESS</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Reseñas</a></li>
+            <li><a href="#">Contacta</a></li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim eget est ut varius. Suspendisse potenti. Sed volutpat libero sem, a bibendum elit interdum vel. Quisque commodo quam aliquam, sodales mauris ac, vehicula massa. Duis non tincidunt lacus. Integer nec magna maximus, pulvinar justo at, efficitur orci. Praesent mattis urna suscipit, tristique lectus vel, laoreet lorem. Nam diam neque, euismod nec feugiat vel, malesuada eu felis. Phasellus vitae purus laoreet mauris vehicula pulvinar. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim eget est ut varius. Suspendisse potenti. Sed volutpat libero sem, a bibendum elit interdum vel. Quisque commodo quam aliquam, sodales mauris ac, vehicula massa.<br/> Duis non tincidunt lacus. Integer nec magna maximus, pulvinar justo at, efficitur orci. Praesent mattis urna suscipit, tristique lectus vel, laoreet lorem. Nam diam neque, euismod nec feugiat vel, malesuada eu felis.<br/> Phasellus vitae purus laoreet mauris vehicula pulvinar.</p>
+        </div>
+        <p class="parrafo1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dignissim eget est ut varius. Suspendisse potenti. Sed volutpat libero sem, a bibendum elit interdum vel. Quisque commodo quam aliquam, sodales mauris ac, vehicula massa. Duis non tincidunt lacus. Integer nec magna maximus, pulvinar justo at, efficitur orci. Praesent mattis urna suscipit, tristique lectus vel, laoreet lorem. Nam diam neque, euismod nec feugiat vel, malesuada eu felis. Phasellus vitae purus laoreet mauris vehicula pulvinar.</p>
+        <hr/>
+        <p class="parrafo3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, eius corporis. Voluptas hic optio, nisi rerum sunt iste ipsam doloribus itaque cum voluptate, quidem amet praesentium illum delectus voluptatem quasi.</p>
+        <h2>Imagenes en HTML</h2>
+        <img src="imagenes/tigre.jpg" alt="Imagen de Tigre"title="Foto de Tigre" width="255px" />
+
+        <hr/>
+
+        <h3>Tercer encabezado de la página</h3>
+
+        <blockquote>Duis non tincidunt lacus. Integer nec magna maximus, pulvinar justo at, efficitur orci. Praesent mattis urna suscipit, tristique lectus vel, laoreet lorem. Nam diam neque, euismod nec feugiat vel, malesuada eu felis.</blockquote>
+
+        <p class="parrafo">Lorem ipsum dolor sit amet,<strong> consectetur adipiscing elit. Phasellus dignissim eget est ut varius</strong>. Suspendisse potenti. Sed volutpat libero sem, a bibendum elit interdum vel. Quisque commodo quam aliquam, sodales mauris ac, vehicula massa. <em>Duis non tincidunt lacus. Integer nec magna maximus, pulvinar justo at</em>, efficitur orci. Praesent mattis urna suscipit, tristique lectus vel, laoreet lorem. Nam diam neque, <spam id="resaltado" class = "rojo amarillo">euismod nec feugiat vel, malesuada eu felis. Phasellus vitae purus laoreet</spam> <i>mauris vehicula</i> pulvinar.</p>
+
+        <h3>Formulario</h3>
+        <div id="usuario">
+        <form>
+
+        <p>
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre"  placeholder="Escribe tu nombre" />
+            <label>Apellidos</label>
+            <input type="text" placeholder="Escribe tu apellido">
+        </p>
+        <p>    
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion"></textarea>
+        </p>
+        <input type="radio" name="genero" value="hombre">Hombre </br>
+        <input type="radio" name="genero" value="mujer">Mujer </br>
+        <input type="radio" name="genero" value="nada">Nada </br>
+
+        <select name="genero">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="nada">Nada</option>
+        </select>
+         
+         <input type="submit" value="Enviar formulario"/>
+        </div>
+        </form>
+
+        <h3>Listado de Frutas</h3>
+
+        <ol>
+            <li>Manzanas
+                <ul>
+                    <li>Roja</li>
+                    <li>Verde</li>
+
+                </ul>
+
+            </li>
+            <li>Naranja</li>
+            <li>Pera</li>
+            <li>Sandia</li>
+        </ol>
+        <ul>
+            <li>Manzanas</li>
+            <li>Naranja</li>
+            <li>Pera</li>
+            <li>Sandia</li>
+        </ul>
+
+        <h3>Tablas</h3>
+        <table border = "1">
+            <tr> 
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Pais</th>
+            </tr>
+            <tr> 
+                <td>Victor</td>
+                <td>Robles</td>
+                <td>España</td>
+            </tr>
+            <tr> 
+                <td>Kevin</td>
+                <td colspan="2">Lopez</td>
+                <td>Mexico</td>
+            </tr>
+
+        </table>
+
+        <div id="saludo">
+            <h1>soy Robert Martin WEB</h1> 
+        </div>
+
+        <footer>
+            Todos los derechos reservados &copy; <a href="#"
+        </footer>
+
+    </body>
+</html>
+

@@ -1,0 +1,55 @@
+body{
+    --rojo:red;/*Esto es una variable dentro  CSS*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+
+
+#layout{
+    display: flex;/*se alinean los elementos uno al lado de otro*/
+    /*flex-direction: row;/*Para indicar la direccion en la trabaja flexbox eje row es fila*/ 
+    /*flex-wrap: wrap ;*/
+    flex-flow: row;
+    justify-items: space-around;/*Para alinear horizontalmente .Todo el contenido  se va a la izquierda y viceversa flex end o nos genera un espacion entre las cajas con space-around*/
+    align-items: center;/*Para alinear verticalmente*/
+    height: 600px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja{
+    /*flex-basis: 25%;/*Tamaño minimo(ancho base) que van a tener las cajas*/
+    /*flex-grow: 1;Cuanto van a crecer las cajas*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    font-weight: bold;/*Texto en negrita*/
+    text-align: center;/*Texto alineado al centro*/
+    color: white;/*texto color blanco*/
+    padding: 20px;/*Espacio interior*/
+    border: 4px solid #222;
+    margin: 10px;/*Margen de separación de las cajas*/
+    background: grey;
+}
+
+.red{
+    align-self: flex-start;
+    
+    /* flex-basis: calc((100% / 3) - 68px);/*se la resta el 68px que son los margenes*/
+    background:var(--rojo);
+}
+.green{
+    margin-top: 0%;
+    background: green;
+}
+.blue{
+    align-self: center;
+    background: blue;
+}
+.orange{
+    align-self: flex-end;
+    
+    
+    
+    background: orange;
+}

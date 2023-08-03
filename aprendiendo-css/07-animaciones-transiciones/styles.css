@@ -1,0 +1,68 @@
+#boton{
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid rgb(8, 48, 8);
+    /*TRANSICIONES*/
+    transition: border 500ms,background 3s,border-radius 1s;
+    /*Si el primer valor esta en all cambian todas las reglas y demora el 
+    tiempo en segundos o milisegundo segundos, en milisegundos seria mas rapido 
+    Si solo quiero que se aplique a una regla especifica seria 
+    transition:border 500ms,background 3s,border-radius 1s */
+}
+#boton:hover{/*Esto se aplica cuando pasamos el raton por arriba*/
+     border-radius: 15px;
+     background: orangered;
+     color: white;
+     border:5px solid red;
+}
+
+#caja{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background: lightseagreen;
+    color: white;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    /*PARA APLICARLE LA ANIMACION A ALGUN ELEMENTO ESPECIFICO O SELECTOR*/
+    animation-name: desplazamiento;
+    animation-duration: 10s;
+    animation-iteration-count:infinite ;/*Esto es para hacer la animacion infinita o no*/
+    animation-timing-function: linear;
+}
+/*ANIMACIONES from(donde empieza la animacion) to(donde termina)*/
+@keyframes desplazamiento{
+    0%{                    /*0% del avance de la animacion*/
+        margin-left:0px;
+        transform: rotate(0deg);
+
+    }
+    50%{                    /*50% del avance de la animacion*/
+        margin-left:1200px;
+        transform: rotate(360deg); /*Rotacion de 360grados*/
+        border-radius: 999px;   /*para convertirlo en un circulo*/
+
+    }
+    75%{
+        background:red ;
+    }
+    77%{
+        border: 10px dashed blue;
+    }
+    100%{                   /*100% del avance de la animacion*/
+        margin-left:0px;
+        transform: rotate(0deg); /*Rotacion de 360grados*/
+
+
+    }
+    
+}

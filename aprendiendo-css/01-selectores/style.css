@@ -1,0 +1,107 @@
+/*
+####### Selectores  #####
+*/
+
+/*Selector universal */
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/*Selector de etiquetas*/
+
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+footer a {
+    color: peru;
+}
+/*Selector de id deben ser únicos*/
+
+#descripcion,
+#titulo{
+    border: 5px solid red;
+    padding: 15px;/*esto es el margen interno*/
+
+}
+#titulo{
+    border: 15px dashed;
+}
+/*Selectores de clase puden ser varias dentro del html*/
+
+.parrafo{
+    font-style: italic;/*estilo de letra*/
+    text-decoration: underline red;/*para subrayar el parrafo*/
+    font-weight: bold;/*esto es para poner letras en negrita(darle grossor a la fuente)*/
+}
+.parrafo1{
+    background-color: lightcoral;
+    color: aliceblue;
+    padding: 10px;
+}
+.parrafo3{
+    background-color: orange;
+    color: blueviolet;
+    border: 10px solid lightgreen;
+}
+/*Selector de atributo se usa casi siempre en formularios*/
+
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;/*margen por arriba*/
+    margin-bottom: 15px;/*margen por debajo*/
+    padding: 20px;
+}
+
+#usuario form *{/*para dar estilos generales a todos lo elementos del formulario*/
+    display:block ;/*para organizar una cosa al lado de otra (para que cada elemento se organice en una linea como un bloque )*/
+}
+
+input[type="text"]{/*Esto es para darle estilos a elementos especificos del formulario en este caso los input de tipo texto*/
+    margin-bottom: 15px;/*separacion (margen por debajo)*/
+    padding: 10px;
+    width: 300px;/*ancho*/
+}
+
+input[type="submit"]{
+    background-color: aqua;
+    color: aliceblue;
+    padding: 15px;
+    font-size: 17px;
+    text-transform: uppercase;/*para poner en mayusculas el mensaje*/
+    border: 1px solid black;
+    cursor: pointer;/*cursor con la manito cuando le pasamos por arriba*/
+}
+
+/*selectores hijo*/
+#menu > li > a{/*Se le aplica a los elementos que estan en el menu ,luego a los <li> luego a los <a>*/
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+/*Prioridad (La ultima regla de CSS tiene mas prioridad que la primera )*/
+
+#saludo h1{/*Esta regla tiene prioridad pues es mas especifica */
+    background: brown;
+
+}
+
+h1{
+    background: purple !important;/* con el importan le damos la maxima prioridad  */
+}
+
+
+
+

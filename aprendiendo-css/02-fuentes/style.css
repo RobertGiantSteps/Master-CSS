@@ -1,0 +1,37 @@
+@font-face{    /*Esto es para usar una fuente descargada (Monserrate en este caso*/
+    font-family: MonserratFuenteCustom;
+    src:url(fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+
+
+h1{
+    /*font-family: Arial, Helvetica, sans-serif;/*Esto son estilos de fuente*/
+    font-style: italic; /*cursiva*/
+    font-family: 'Mansalva', cursive;
+    text-transform: uppercase;/*mayusculas o minusculas*/
+    font-size: 45px;
+
+    /*COLORES*/
+    /*Colores del sistema*/
+    color: mediumpurple;
+    /*Colores hexadecimales*/
+    color: #3213be87;
+    /*Colores RGB*/
+    color: rgb(245, 244, 83); 
+    /*Colores RGBA(con transparencia)*/
+    color: rgba(255, 67, 230, 0.9);
+
+}
+h3{
+    font-family:MonserratFuenteCustom, "Comic Sans MS";
+    font-size: 25px;/*Tamaño de la fuente puede ser :px, em, % 1 em = 16 px*/
+    font-weight: lighter;
+    color: olive;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;/*Grosor de la letra */
+}

@@ -1,0 +1,57 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul li{
+    font-size: 20px;/*TAMAÑO LETRA*/
+}
+
+ul li:first-child{/* selcciona el primer hijo (la primera li que hay en este caso)*/
+    color: purple;
+    font-weight: bold;
+}
+ul li:last-child{/* selecciona el ultimo hijo (el ultimo li que hay en
+    la lista este caso)*/
+    color: grey;
+    font-weight: bold;
+}
+ul li:nth-child(2){ /* PARA ESCOGER UN ELEMENTO ESPECÏFICO (hijo de la lista)*/
+    color: orange;
+    font-weight: bold;
+    
+}
+#mi-enlace{
+    font-size: 30px;
+    color: lightsalmon;
+}
+/*PSEUDO _CLASE PARA ENLACES*/
+#mi-enlace:link{ /*Es para cuando no he visitado el enlace tenga unas caracteristicas 
+    luego cambie*/
+    color: red;
+
+}
+#mi-enlace:visited{/*si he visitado el enlace que aplique otras caracteristicas*/
+    color: orangered;
+}
+/*PSEUDO_CLASE QUE SE PUEDEN APLICAR A CUALQUIER ELEMENTO O SELECTOR HTML*/
+
+#mi-enlace:hover{/*Cuando pase por encima el raton cambien las caracteristicas del elemento*/
+    color: blue;
+}
+
+#mi-enlace:active{/*Cuando este pulsando sobre el elemento da unos estilos diferentes*/
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+/*PSEUDO_CLASES QUE SE SUELEN USAR EN FORMULARIOS Y INPUT*/
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="text"]:focus{/*Cambia las caracteristicas cuando estamos en ese elemento
+    y damos click en el */
+    border: 4px dashed red;
+
+}

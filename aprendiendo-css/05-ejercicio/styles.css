@@ -1,0 +1,187 @@
+/*
+Ejercicio completo con HTML y CSS
+
+(HECHO) 1.Crear un documento HTML y vincularlo con CSS
+(HECHO)2.Crear una estructura HTML que cuente con un contenedor general
+que tenga un CONTENEDOR GENERAL,CABECERA,MENU ;BARRA LATERAL,SECCION DE CONTENIDO PRINCIPAL,
+ELEMENTOS DETRO DEL CONTENEDOR  PRICIPAL Y UN FOOTER.
+(HECHO)3.Todo el contenido tiene que estar dentro del contenedor general y el 
+ancho sera 1200px y estar centrado.
+(HECHO)4.El Header debe ocupar el 100% del ancho y tener un texto grande centrado .
+(HECHO)5.Menu debe tener los elementos uno al ldo de otro
+(HECHO)6.El contenido principal debeb tener un ancho de 70%
+(HECHO)7.El contenido dentro del contenedor principal debe ser una cuadricula 
+con 4 lineas de dos cajas .
+(HECHO)8.La barra lateral debe tener un ancho del 30 % .
+9.El Footer debe tener un ancho del 100% y debe estar abajo del todo.
+*/
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+
+}
+
+#general{
+    width: 1200px;
+    margin: 0px auto;    /* Esto Centra el elemento en el centro de la página*/
+    border: 1px solid #ccc;
+    margin-top: 20px; 
+}
+
+#header{
+    width: 100%;
+    height: 100px;  /*Esto para que tenga un tamaño fijo(altura)*/
+    background: rgb(66, 94, 171);
+    text-align: center;
+    line-height: 90px; /*Esto es para que se centre verticalmente*/
+    color: white;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#menu ul li{
+    /*display: inline-block; /*Esto para poner los elementos uno al lado de otros*/
+    display: block;
+    float: left;
+    border-right: 1px solid #ccc; /*Esto crea un borde y unos separadores el menu*/
+
+    
+}
+
+#menu{
+    background: #eee;
+    
+}
+
+#menu ul li a{
+    display: block; /*para que todos lo elementos funcionen en bloque y funcionen los enlaces*/
+    padding: 15px;
+    color: #444; /*Esta seleccion es para cambiar el color de los enlaces*/
+
+}
+
+#menu ul li:hover{ /*Esto es una seudoclase (CUANDO PASAMOS EL RATON CAMBIA DE COLOR O COMPORTAMIENTO*/
+    background: rgb(30, 46, 92);
+    cursor: pointer; /*PARA PORNER CURSOR MANITO*/
+}
+
+#menu ul li:hover a{ /* background a los elemetos de la lista en si */
+    
+    color:white;
+}
+
+#contenido{
+    width: 69%;
+    float: left;
+  
+    
+}
+#lateral{
+    float: left; /*PARA PONER LOS DOS ELEMENTOS UNO AL LADO DE OTRO */
+    width: 30%;
+    border: 1px solid red;
+    min-height: 500px;
+    max-height: 650px;
+    text-align: center;
+    overflow-y: scroll;/*ESTO ES MUY IMPORTATE PARA QUE CUANDO LA CAJA TIENE UN MAXIMO DE ALTURA 
+    max-height:650px EL CONTENIDO NO SE SALGA DE LA CAJA (overflow-y)en el eje y crea una 
+    barra de scroll*/
+}
+
+
+#contenido > h1{    /*Estos son los estilos del h1 que esta en class=contenido*/
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    color: #444; 
+    text-shadow: 1px 1px 2px grey;/*Esto es para la sombra del texto con 4 parametros
+    (sombra sobre eje x eje y ,difuminado 2px ,color de la sombra(grey)*/
+
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 250px;
+    background-color: #ccc;
+    border: 1px solid grey;
+    color: white;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 200px;
+    color: #444;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 10px grey;/* SOMBRA sobre  las cajas 
+    parametros: eje X ,eje Y, Difuminado ,color*/
+    border-radius: 50px 10px 4px 61px; /*ESTO PARA BORDE DE LAS CAJAS REDONDEADO
+    (se redondea también por esquinas separadas )*/
+    /*border-radius: 999px;/*CON ESTO LO REDONDEAMOS LO MAXIMO POSIBLE*/
+}
+
+.sombra-interior{
+    box-shadow: 0px 0px 20px grey inset !important;/*Esto es para que la sombra sea interior 
+    !important para que tenga prioridad a la hora de aplicarse EFECTO DE PROFUNDIDAD en la caja */
+
+}
+
+footer{
+    width: 100%;
+    height: 55px;
+    line-height: 55px; /*ESTO TE PONE EL CONTENIDO EN EL CENTRO DE LA PAGINA*/
+    background: #eee;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #ccc;
+    
+}
+/*CON ESTA CAJA APRENDEMOS POSICIONAMIENTO*/
+
+.libre{
+    position: absolute; /* con esta propiedad en absolute 
+    puedo mover la caja donde quiera en la pagina por encima de todo*/
+    top: 300px;/*esto pone la caja arriba en el px 0 si el valor es 
+    top:0px donde empieza la pagina*/
+    left: 50%;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+.libre1{
+    
+    z-index: 1;/*Indica a CSS que caja esta por encima de la otra */
+}
+.libre2{
+    background-color: green;
+    top: 280px;
+    left: 53%;
+    z-index: 2;/*Indica a CSS que caja esta por encima de la otra */
+}
+.fija{
+    position: fixed; /* con esta propiedad en FIXED 
+    puedo mover la caja donde quiera en la pagina por encima de todo
+    pero va a estar fija cuando haga scroll*/
+    top: 50%;/*esto pone la caja arriba en el px 0 si el valor es 
+    top:0px donde empieza la pagina*/
+    left: 0px;
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+
+}
